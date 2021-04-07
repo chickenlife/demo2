@@ -34,5 +34,14 @@ public class GradeDomainService {
         return personRepository.save(person);
     }
 
+    //person update
+    public Person updatePerson(String name, String updateName) {
+        log.debug("updatePerson : {}", name);
+        Optional<Person> person = personRepository.findByName(name);
+        person.get().setName(updateName);
+        personRepository.save(person.get());
+        return person.get();
+    }
+
     //grade save with person
 }

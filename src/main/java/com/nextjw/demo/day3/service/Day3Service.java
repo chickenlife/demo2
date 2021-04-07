@@ -21,13 +21,22 @@ public class Day3Service {
     public PersonDto getPerson(String name) {
         PersonDto personDto = new PersonDto();
         Person person = gradeDomainService.getPerson(name)
-                .orElseThrow(() -> new RuntimeException("asdf"));
+                .orElseThrow(() -> new RuntimeException("Not Found "+name));
         personDto.setName(person.getName());
         return personDto;
     }
 
-    public Person addPerson(Person person) {
+    public PersonDto addPerson(PersonDto persondto) {
+        Person person = new Person();
+        person.setName(persondto.getName());
+        gradeDomainService.addPerson(person.getName());
+        return persondto;
+    }
 
-        return gradeDomainService.addPerson(person.getName());
+    public PersonDto updatePerson(String name, PersonDto persondto) {
+        Person person = new Person();
+        person.setName(persondto.getName());
+        gradeDomainService.updatePerson(name, person.getName());
+        return persondto;
     }
 }

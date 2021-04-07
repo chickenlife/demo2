@@ -19,15 +19,19 @@ public class Day3Controller {
         return day3Service.hello();
     }
 
-
-
     @GetMapping("/getPerson/{name}")
     public PersonDto getPerson(@PathVariable String name){
         return day3Service.getPerson(name);
     }
 
     @PostMapping("/addPerson")
-    public Person addPerson(@RequestBody Person person){
-        return day3Service.addPerson(person);
+    public PersonDto addPerson(@RequestBody PersonDto persondto){
+        return day3Service.addPerson(persondto);
     }
+
+    @PutMapping("/updatePerson/{name}")
+    public PersonDto updatePerson(@PathVariable String name, @RequestBody PersonDto persondto){
+        return day3Service.updatePerson(name, persondto);
+    }
+
 }
