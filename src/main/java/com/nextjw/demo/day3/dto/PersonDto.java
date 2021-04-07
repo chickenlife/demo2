@@ -3,7 +3,6 @@ package com.nextjw.demo.day3.dto;
 import lombok.Data;
 
 @Data
-public class Day3Dto {
+public class PersonDto {
     private String name;
-    private int age;
 }

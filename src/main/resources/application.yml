@@ -1,0 +1,4 @@
+logging:
+  level:
+    root: info
+    com.nextjw.demo.day3.domain : debug

@@ -21,12 +21,14 @@ public class GradeDomainService {
     //find person by name
     @Transactional(readOnly = true)
     public Optional<Person> getPerson(String name) {
+        log.debug("getPerson : input value : {}",name);
         return personRepository.findByName(name);
     }
 
     //person save
     @Transactional
     public Person addPerson(String name) {
+        log.debug("addPerson : {}",name);
         Person person = new Person();
         person.setName(name);
         return personRepository.save(person);
