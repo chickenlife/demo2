@@ -16,7 +16,7 @@ public class Grade {
     String name;
     Integer grade;
 
-    @OneToMany(mappedBy = "studentId")
+    @ManyToOne
     Person student;
 
     @Version
