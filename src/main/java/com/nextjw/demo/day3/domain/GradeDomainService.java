@@ -1,8 +1,8 @@
-package com.nextjw.demo.domain;
+package com.nextjw.demo.day3.domain;
 
-import com.nextjw.demo.domain.model.Person;
-import com.nextjw.demo.domain.repository.GradeRepository;
-import com.nextjw.demo.domain.repository.PersonRepository;
+import com.nextjw.demo.day3.domain.model.Person;
+import com.nextjw.demo.day3.domain.repository.GradeRepository;
+import com.nextjw.demo.day3.domain.repository.PersonRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -14,7 +14,7 @@ import java.util.Optional;
 @Service
 @Slf4j
 @RequiredArgsConstructor
-public class GradeService {
+public class GradeDomainService {
     private final PersonRepository personRepository;
     private final GradeRepository gradeRepository;
 

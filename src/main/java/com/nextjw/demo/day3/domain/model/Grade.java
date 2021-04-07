@@ -1,4 +1,4 @@
-package com.nextjw.demo.domain.model;
+package com.nextjw.demo.day3.domain.model;
 
 import lombok.Data;
 
@@ -6,14 +6,18 @@ import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "Person")
+@Table(name = "Grade")
 @Data
-public class Person {
+public class Grade {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     Long id;
 
     String name;
+    Integer grade;
+
+    @ManyToOne
+    Person student;
 
     @Version
     Long version;

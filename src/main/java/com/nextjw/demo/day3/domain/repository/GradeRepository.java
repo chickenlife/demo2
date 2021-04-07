@@ -1,6 +1,6 @@
-package com.nextjw.demo.domain.repository;
+package com.nextjw.demo.day3.domain.repository;
 
-import com.nextjw.demo.domain.model.Grade;
+import com.nextjw.demo.day3.domain.model.Grade;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
