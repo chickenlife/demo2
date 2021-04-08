@@ -43,5 +43,15 @@ public class GradeDomainService {
         return person.get();
     }
 
+    public Optional<Person> deletePerson(String name) {
+        log.debug("deletePerson : {}",name);
+        Optional<Person> person = personRepository.findByName(name);
+        personRepository.deleteById(person.get().getId());
+        return person;
+    }
+
     //grade save with person
+
+    //person delete
+
 }

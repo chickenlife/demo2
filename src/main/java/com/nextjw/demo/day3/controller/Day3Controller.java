@@ -34,4 +34,8 @@ public class Day3Controller {
         return day3Service.updatePerson(name, persondto);
     }
 
+    @DeleteMapping("/deletePerson/{name}")
+    public PersonDto deletePerson(@PathVariable String name){
+        return day3Service.deletePerson(name);
+    }
 }

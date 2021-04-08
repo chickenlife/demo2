@@ -39,4 +39,11 @@ public class Day3Service {
         gradeDomainService.updatePerson(name, person.getName());
         return persondto;
     }
+
+    public PersonDto deletePerson(String name) {
+        PersonDto personDto = new PersonDto();
+        personDto.setName(name);
+        gradeDomainService.deletePerson(name);
+        return personDto;
+    }
 }
